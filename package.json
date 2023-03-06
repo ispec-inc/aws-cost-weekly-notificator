@@ -1,0 +1,13 @@
+{
+  "name": "aws-cost-weekly-notificator",
+  "version": "1.0.0",
+  "description": "",
+  "author": "@YumaFuu",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-cost-explorer": "^3.282.0",
+    "@aws-sdk/credential-provider-env": "^3.272.0",
+    "ascii-table": "^0.0.9",
+    "cli-table3": "^0.6.3"
+  }
+}
