@@ -1,13 +1,13 @@
 # aws-cost-notifier-lambda-layer
 
-## 環境変数
+## Lambda Environment
 
-| name              | description             | required | default    |
-|-------------------|-------------------------|----------|------------|
-| SLACK_WEBHOOK_URL | slackのwebhookのURL     | true     |            |
-| SLACK_CHANNEL     | 投稿するslackチャンネル | true     |            |
-| SLACK_USERNAME    | botの名前               | false    | "aws cost" |
-| SLACK_ICON_EMOJI  | botのicon emoji         | false    | ":ghost:"  |
+| name              | description          | required | default    |
+|-------------------|----------------------|----------|------------|
+| SLACK_WEBHOOK_URL | Slack WebhookUrl     | true     |            |
+| SLACK_CHANNEL     | Target Slack Channel | true     |            |
+| SLACK_USERNAME    | bot name             | false    | "aws cost" |
+| SLACK_ICON_EMOJI  | bot's icon emoji     | false    | ":ghost:"  |
 
 
 ## Development
