@@ -6,18 +6,18 @@ Parameters:
     Description: Slack WebhookURL
     Type: String
   SlackChannel:
-    Description: Slack WebhookURL
+    Description: Slack Channel
     Type: String
   SlackUsername:
-    Description: Slack WebhookURL
+    Description: Slack Username
     Type: String
     Default: ""
   SlackIconEmoji:
-    Description: Slack WebhookURL
+    Description: Slack IconEmoji
     Type: String
     Default: ""
   ScheduleExpression:
-    Description: cron
+    Description: cron expression
     Type: String
     Default: "cron(0 0 ? * MON *)"
 

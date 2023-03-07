@@ -3,7 +3,7 @@
 # Apply
 
 ```bash
-$ curl $URL | bash -
+$ curl https://raw.githubusercontent.com/ispec-inc/aws-cost-weekly-notifier/master/cfn.yaml | bash -
 ```
 
 ## Lambda Environment
