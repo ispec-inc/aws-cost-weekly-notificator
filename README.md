@@ -4,10 +4,11 @@
 
 | name              | description          | required | default    |
 |-------------------|----------------------|----------|------------|
+| ACCOUNT_NAME      | AWS Account Name     | true     |            |
 | SLACK_WEBHOOK_URL | Slack WebhookUrl     | true     |            |
 | SLACK_CHANNEL     | Target Slack Channel | true     |            |
-| SLACK_USERNAME    | bot name             | false    | "aws cost" |
-| SLACK_ICON_EMOJI  | bot's icon emoji     | false    | ":ghost:"  |
+| SLACK_USERNAME    | Bot name             | false    | "aws cost" |
+| SLACK_ICON_EMOJI  | Bot's icon emoji     | false    | ":ghost:"  |
 
 
 ## Development

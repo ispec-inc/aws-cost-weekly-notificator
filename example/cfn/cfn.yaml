@@ -1,4 +1,7 @@
 Parameters:
+  AccountName:
+    Description: AWS AccountName
+    Type: String
   SlackWebhookUrl:
     Description: Slack WebhookURL
     Type: String
@@ -13,6 +16,10 @@ Parameters:
     Description: Slack WebhookURL
     Type: String
     Default: ""
+  ScheduleExpression:
+    Description: cron
+    Type: String
+    Default: "cron(0 0 ? * MON *)"
 
 Resources:
   LambdaRole:
@@ -50,9 +57,10 @@ Resources:
           const WeeklyCostNotify = require("WeeklyCostNotify");
           exports.handler = async () => { await WeeklyCostNotify() };
       Layers:
-        - "arn:aws:lambda:ap-northeast-1:987241170645:layer:aws-cost-notifier:8"
+        - "arn:aws:lambda:ap-northeast-1:987241170645:layer:aws-cost-notifier:9"
       Environment:
         Variables:
+          ACCOUNT_NAME: !Ref AccountName
           SLACK_WEBHOOK_URL: !Ref SlackWebhookUrl
           SLACK_CHANNEL: !Ref SlackChannel
           SLACK_USERNAME: !Ref SlackUsername
@@ -63,7 +71,7 @@ Resources:
     Properties:
       EventBusName: default
       Name: aws-cost-notifier-rule
-      ScheduleExpression: "cron(0 0 ? * MON *)"
+      ScheduleExpression: !Ref ScheduleExpression
       State: ENABLED
       Targets:
         - Arn: !GetAtt LambdaFunction.Arn
