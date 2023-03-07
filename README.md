@@ -1,5 +1,11 @@
 # aws-cost-notifier-lambda-layer
 
+# Apply
+
+```bash
+$ curl $URL | bash -
+```
+
 ## Lambda Environment
 
 | name              | description          | required | default    |
