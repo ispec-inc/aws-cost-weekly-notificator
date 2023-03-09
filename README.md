@@ -6,7 +6,8 @@ You should create slack IncomingWebhook
 - [Slack IncomingWebhook](https://ispec.slack.com/apps/A0F7XDUAZ--incoming-webhook-?tab=more_info)
 
 ```bash
-$ ACCOUNT_NAME="your awesome project" \
+$ AWS_PROFILE="<your profile name>" \ 
+ACCOUNT_NAME="<your awesome project>" \
 SLACK_WEBHOOK_URL="https://hooks.slack.com/services/xxxx/yyyyyy/zzzzzzzz" \
 SLACK_CHANNEL="#some-notif-channel" \
 curl -s https://raw.githubusercontent.com/ispec-inc/aws-cost-weekly-notifier/master/install.sh | bash -
